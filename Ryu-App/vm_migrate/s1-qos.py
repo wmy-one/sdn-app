@@ -1,0 +1,3 @@
+ovs-vsctl -- set port s1-eth1 qos=@defaultqos -- --id=@defaultqos create qos type=linux-htb other-config:max-rate=1000000000 queues:2=@q2 -- --id=@q2 create queue other-config:max-rate=20000000 other-config:min-rate=20000000
+ovs-vsctl -- set port s1-eth3 qos=@defaultqos -- --id=@defaultqos create qos type=linux-htb other-config:max-rate=1000000000 queues:2=@q2 -- --id=@q2 create queue other-config:max-rate=20000000 other-config:min-rate=20000000
+ovs-vsctl -- set port s1-eth2 qos=@defaultqos -- --id=@defaultqos create qos type=linux-htb other-config:max-rate=100000000 queues:2=@q2 -- --id=@q2 create queue other-config:max-rate=20000000 other-config:min-rate=20000000
